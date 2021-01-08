@@ -24,7 +24,7 @@ jobs:
       run: dotnet build --configuration Debug --no-restore /p:DebugType=None
     
     - name: Publish
-      run: dotnet publish CICDPracticalRepo/CICDPracticalRepo.csproj -o PublishDev/CICDPracticalRepo/ -r win-x64 --self-contained false /p:DebugType=None
+      run: dotnet publish CICDDemo/CICDDemo.csproj -o PublishDev/CICDDemo/ -r win-x64 --self-contained false /p:DebugType=None
     
     #- name: Test
     #  run: dotnet test --no-build --verbosity normal
@@ -33,4 +33,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: CICDPublish        
-        path: PublishDev/CICDPracticalRepo/
+        path: PublishDev/CICDDemo/
