@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    name:  Production Build
+    name: Production Build
     runs-on: windows-latest
     env:
       IIS_SERVER_COMPUTER_NAME: ${{ secrets.IIS_SERVER_COMPUTER_NAME }}
